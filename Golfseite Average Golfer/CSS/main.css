@@ -1,6 +1,4 @@
-body, p, h1, h2, h3, header, section, button, footer, a, nav, input, main,
-#news, #angebote-bereich-main,#newsletter, #angebote-bereich-links, #angebote-breich-rechts,
- .AVG-logo, .btn-typ1, .active,  .navigation,.angebote-box,  div, form, nav, ul, li, #header-nav {
+* {
   padding: 0;
   margin: 0;
   border: 0;
@@ -10,8 +8,7 @@ body, p, h1, h2, h3, header, section, button, footer, a, nav, input, main,
 body {
   font-family: 'Raleway', 'Lato', 'Helvetiva Neue', 'Arial', sans-serif;
   background-color: #dcdcdc;
-
-}
+  }
 
 :focus {
   outline: none;
@@ -23,71 +20,197 @@ body {
 
 }
 
-/* Navigationsleiste */
+/* Farben */
+
+/* Hellblau  #94BEE4 rgb(148, 190, 228)
+Hellgrau     #97A4AA rgb(151, 164, 170)
+Grün         #4C5B34 rgb(76, 91, 52)
+Ocker        #AD8E57 rgb(173, 142, 87)
+Blau         #24546B rgb(36, 84, 107)
+leicht grau  #dcdcdc
+grau Nav     #878383
+*/
+
+
+
+/* Desktop Navigationsleiste */
+
+
 nav {
-  background-color: #878383;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  /* width: 100vw; */
   height: 5vh;
-
+  width: 100vw;
+  background-color: #878383;
 
 }
 
-nav > ul {
+#AVG-Logo-klein {
+  width: 70px;
+  height: 40px;
+  left: 20px;
+
+}
+
+.nav-links {
   display: flex;
-  justify-content: flex-end;
-  width:100%;
-  height:100%;
-
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+  height: 100%;
 }
 
-nav > ul > li {
+.nav-links  li {
+  height: 100%;
+  width: 100%;
+  list-style: none;
+}
+
+.nav-links > li > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  list-style: none;
-  text-align: center;
-  color: rgba(255, 255, 255, .8);
+  text-decoration: none;
+  color: #dcdcdc;
   font-size: 1.4rem;
   height: 100%;
-
-  }
-
-nav > ul > li > a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  height: 100%;
   width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+
 }
 
-nav > ul > li > a:link {
-  color: rgba(255, 255, 255, .8);
-}
-
-nav > ul > li > a:visited {
-  color: rgba(255, 255, 255, .8);
-}
-
-
-nav > ul > li > a:hover {
-  background-color: #dcdcdc;
-  color: #5e5b5b;
-}
-
-nav > ul > li > a:active {
-  background-color: #dcdcdc;
+.nav-links > li > a:hover {
+  background-color: #94BEE4 ;
+  color: #878383;
 
 }
 
 .active {
-  background-color: #3194f7 !important;
+  background-color: #94BEE4;
+  color: #dcdcdc;
 }
+
+/* Navigationsleiste Smartphone*/
+
+
+
+input[type="checkbox"] {
+    /* toggle */
+    display: none;
+}
+
+#sidebar {
+    /* toggle */
+    position: fixed;
+    right: -80rem;
+    top: 5vh;
+    /* formatting */
+    height: 60vh;
+    width: 40vw;
+    background-color: #878383;
+    border-right: 2px solid #24546B
+    /* transition */
+    transition-property: all;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+}
+
+input[type="checkbox"]:checked + #sidebar {
+    /* toggle */
+    right: 0;
+}
+  .menu {
+      /* position */
+      position: fixed;
+      display: flex;
+      right: 0;
+      z-index: -4;
+      /*arrange content*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*format*/
+      width: 5rem;
+      height: 5vh;
+      border: 2px solid #dcdcdc;
+      background-color: #878383;
+      border-radius: 2px;
+      cursor: pointer;
+      color: #dcdcdc;
+
+  }
+
+  .menu:hover {
+    background-color: #94BEE4 ;
+    color: #878383;
+
+  }
+
+  .mobile-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+  }
+
+  .mobile-link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #dcdcdc;
+    font-size: 1.4rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .mobile-link a:hover {
+    background-color: #94BEE4;
+    color: #878383;
+  }
+
+  @media screen and (max-width: 768px) {
+    .menu {
+      z-index: 1;
+    }
+
+    .nav-links {
+      z-index: -4;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .menu {
+      z-index: 1;
+    }
+
+   #sidebar {
+     z-index: 4;
+   }
+
+    .nav-links {
+      z-index: -4;
+    }
+
+  }
+  @media screen and (min-width: 375px) {
+    nav {
+      width 100%;
+    }
+
+  }
+
+  @media screen and (min-width: 1024px) {
+    #sidebar {
+      display: none;
+    }
+
+    .nav-links {
+      width: 60%;
+    }
+
+  }
 
 
 /* Header */
@@ -97,15 +220,15 @@ nav > ul > li > a:active {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background-image: url(../Pics/navi.jpg);
+  background-image: url(../Pics/header-groß.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: inherit;
   background-position:  0 -60px;
   margin-left: auto;
   margin-right: auto;
-  /* width: 100vw; */
-  height: 28vh;
+  width: 100vw;
+  height: 25vh;
 
 }
 
@@ -114,11 +237,42 @@ nav > ul > li > a:active {
   font-size: 4rem;
 }
 
+
+@media (min-width: 1400px) {
+  .container {
+    background-position: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    background-position:  0;
+
+
+    background-size: cover;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container h1 {
+    font-size: 3.2rem;
+  }
+
+}
+
+@media (max-width: 668px) {
+  .container h1 {
+    font-size: 2.4rem;
+  }
+
+}
+
 /* Newsletter */
 
 #newsletter {
   background-color: #5e5b5b;
   height: 7vh;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -133,41 +287,64 @@ nav > ul > li > a:active {
   align-items: center;
   height: 100%;
   width: 65%;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
-#newsletter form {
+#newsletter p {
+  font-size: 1.4rem;
+}
+
+#news {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 30%;
+  width: 35%;
   height: 100%;
-  padding-right: 10px;
-  border: 1px solid black;
+  padding-right: 20px;
 
   }
 
   #news input {
+    min-width: 250px;
     height: 36px;
     color: #5e5b5b;
     padding-left: 6px;
   }
-  @media (max-width: 1366px) {
 
+@media (max-width: 1400px) {
 
-    #newsletter form
-    { flex-flow: column;
-      justify-content: center;
-    }
+  #newsletter p {
+    font-size: 1rem;
+  }
+  #newsletter > div {
+    width: 60%;
+  }
+}
 
+@media (max-width: 1100px) {
+  .btn-typ1 {
+    min-width: 180px;
+  }
+}
 
+@media (max-width: 1024px) {
+
+  #newsletter > div {
+    display: none;
   }
 
+  #news {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
 
   /* Butttons */
 
   .btn-typ1 {
-    background-color: #3194f7;
+    background-color: #94BEE4;
     height: 36px;
     width: 140px;
     margin-left: 2px;
@@ -175,7 +352,7 @@ nav > ul > li > a:active {
     padding: 0 2px 0 2px;
     font-size: 1rem;
     color: rgba(255, 255, 255, 1);
-    border: 2px solid #3194f7;
+    border: 2px solid #94BEE4;
 
       }
 
@@ -187,25 +364,56 @@ nav > ul > li > a:active {
   }
 
   .btn-typ2 {
+    display: flex;
+    justify-content:center;
+    align-items: center;
     height: 36px;
     width: 140px;
     background-color: transparent;
     border: 2px solid #5e5b5b;
     text-decoration: none;
-    align-items: center;
-    color:rgba(255, 255, 255, .8);
+    color: #5e5b5b;
     font-size: 1.4rem;
     font-weight: 300;
+    cursor: pointer;
+    border-radius: 5px;
   }
 
   .btn-typ2:hover {
     -webkit-transition: border .5s ease-in-out, color .5s ease-in-out;
     transition: border.5s ease-in-out, color .5 ease-in-out;
-    border: 2px solid #680000;
-    color: #680000;
+    border: 2px solid #AD8E57;
+    color: #AD8E57;
   }
 
   /* Main Bereich*/
+  #intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 10vh; */
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+  }
+
+  #intro > h2 {
+    margin-top: 20px;
+  }
+
+  #intro  p {
+    margin-top: 20px;
+  }
+
+  .AVG-logo {
+    width: 20%;
+    height: 50%;
+    border: 1px solid green;
+  }
+
+/* Leistungs Bereich */
 
   main {
     display: flex;
@@ -213,27 +421,159 @@ nav > ul > li > a:active {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
 
-    padding: 10px;
-    /* border: 1px solid black; */
-
-
   }
 
-  main > .AVG-logo {
-    margin-bottom: 40px;
-  }
-
-  .AVG-logo {
-    width: 20%;
-    height: 60%;
+  .leistungen {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    height: 60vh;
+    border: 2px solid #24546B;
+    border-radius: 5px;
       }
 
-  main > section {
+  .leist-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+
+          }
+
+  .leist-header > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: #24546B;
+    color: #dcdcdc;
+    margin-left: 2px;
+    margin-right: 2px;
+    /* padding: 5px; */
+    font-size: 1.4rem;
+    height: 80%;
+    width: 20%;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: auto;
+      }
+
+  .leist-header p:hover {
+    background-color: #878383;
+    color: #24546B;
+    font-weight: bold;
+          }
+
+  .hover {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hover::before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    transform: scaleX(0);
+    height: 4px;
+    bottom: 19px;
+    border-radius: 5px;
+    background-color: #24546B;
+    transform-origin: center;
+    transition: transform .2s ease-out;
+  }
+
+  .hover:hover::before {
+    transform: scaleX(1);
+    transform-origin: center;
+  }
+
+  .leist-main {
+    display: flex;
+    width: 100%;
+    height: 85%;
+    border: 1px solid red;
+  }
+
+  .bilder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 1px solid yellow;
+  }
+
+  .leist-beschr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+  }
+
+  .leist-beschr > h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    background-color: #24546B;
+    color: #dcdcdc;
+
+  }
+
+  .leist-beschr p {
+    width: 80%;
+    font-size: 1.1rem;
+    padding: 10px;
+    margin:  20px 0 20px 0;
+  }
+
+@media (max-width: 1024px) {
+  .leistung {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+   height: 100vh;
+  }
+
+  .leist-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .leist-main > div {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 60%;
+  }
+
+
+  /* .bilder {
+    background-size: cover;
+    background-position: auto;
+    width: 80%;
+    height: 70%;
+  } */
+
+
+}
+
+
+  /* main > section {
     font-size: 1.2rem;
     padding: 5px;
     margin-bottom: 40px;
@@ -270,7 +610,7 @@ nav > ul > li > a:active {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: #264e71;
+    background-color: #24546B;
     color:rgba(255, 255, 255, 1);
     width: 28vw;
     padding: 10px;
@@ -279,4 +619,4 @@ nav > ul > li > a:active {
 
 .angebote-box p {
   padding: 10px 0 10px 0;
-}
+} */

@@ -8,23 +8,43 @@
 		<link rel="stylesheet" type="text/css" href="CSS/main.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+		<script type="text/javascript" src="JS/index.js">
+
+		</script>
+
+
+
 
 	</head>
 
 	<body>
 
     <!-- Navigationsleiste -->
-		<!-- Desktop Navigation -->
-    <nav id="header-nav">
-      <ul>
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="ueberuns.html">Über Uns</a></li>
-        <li><a href="">Unsere Angebote</a></li>
-        <li><a href="">Videos</a></li>
-        <li><a href="">Blog</a></li>
-      </ul>
 
-    </nav>
+		<nav>
+	  	<div >
+				<!-- <a href="index.html"><img src="" id="AVG-Logo-klein" alt="AVG-Logo"></a> -->
+	  	</div>
+
+			<ul class="nav-links">
+				<li><a href="index.html" class="active">Startseite</a></li>
+	      <li><a href="leistungen.html">Leistungen</a></li>
+	      <li><a href="">Videos</a></li>
+				<li><a href="">Neuigkeiten</a></li>
+	      <li><a href="ueberuns.html">Über uns</a></li>
+			</ul>
+
+			<label for="zeige-menu" class="menu">&equiv;</label>
+			<input type="checkbox" id="zeige-menu">
+			<div id="sidebar">
+				<div class="mobile-link" class="active"><a href="index.html" class="active">Startseite</a></div>
+				<div class="mobile-link"><a href="leistungen.html">Leistungen</a></div>
+				<div class="mobile-link"><a href="#">Videos</a></div>
+				<div class="mobile-link"><a href="#">Neuigkeiten</a></div>
+				<div class="mobile-link"><a href="#">Über uns</a></div>
+			</div>
+	  </nav>
+
 
     <!-- Hintergrundbild -->
 
@@ -37,7 +57,7 @@
 		<section id="newsletter">
 			<div >
 				<p><strong>Melde dich jetzt zu unserem Newsletter an und verpasse nichts mehr!</strong>
-						Wir schicken dir nur interresante Information zu.
+
 				</p>
 
 			</div>
@@ -52,59 +72,60 @@
 
 			</form>
 		</section>
-    <main>
 
+
+		<section id="intro">
 			<div class="AVG-logo">
 				<img src="" alt="Logo von Average Golfer">
-
-
 			</div>
+			<h2>	Lorem Ipsum			</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</section>
 
-			<section>
-				<h2>	Lorem Ipsum			</h2>
+	<main>
 
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!-- Leistungsbereich -->
 
-
-			</section>
-
-			<section id="angebote-bereich-main">
-				<article id="angebote-bereich-oben">
-
-					<div class="angebote-box">
-						<h3>Angebot 1</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="" class="btn-typ2">Ansehen</a>
-					</div>
-
-					<div class="angebote-box">
-						<h3>Angebot 2</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="" class="btn-typ2">Ansehen</a>
-					</div>
+			<section class="leistungen">
+				<article class="leist-header" >
+					<p class="hover" onclick="putten()">Putten</p>
+					<p class="hover" onclick="chippen()">Chippen</p>
+					<p class="hover" onclick="driver()">Driver</p>
+					<a href="leistungen.html" class="btn-typ2">mehr</a>
+					<!-- <p><a href="leistungen.html" class="hover">mehr ansehen</a></p> -->
 				</article>
 
-				<article id="angebote-bereich-unten">
 
-					<div class="angebote-box">
-						<h3>Angebot 3</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="" class="btn-typ2">Ansehen</a>
+				<article class="leist-main">
+					<div><img class="bilder" src="Pics/Putting.png" alt="Putting"></div>
+					<div class="leist-beschr">
+						<h3 id="text-h3">Putten</h3>
+						<p id="text-p">Putting is a golf stroke used with a club called a putter when you are on or just off the green. Golfers may use clubs such as the driver, fairway woods, hybrids and irons to get to the green. A wedge such as the pitching wedge is used to hit the ball on the green in a favorable position to get the ball into the hole in one or two strokes with the putter.</p>
+						<a href="leistungen.html" class="btn-typ2">Ansehen</a>
 					</div>
-
-					<div class="angebote-box">
-						<h3>Angebot 4</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<a href="" class="btn-typ2">Ansehen</a>
-					</div>
-
 				</article>
 			</section>
+
+<!-- Videobereich -->
+
+			<!-- <section class="video">
+				<div>video</div>
+				<div>video</div>
+				<div>video</div>
+				<div>video</div>
+
+			</section> -->
+
+
+
 
     </main>
+
     <footer>
 
     </footer>
+
+	<script scr="JS/index.js">	</script>
 
 	</body>
 
