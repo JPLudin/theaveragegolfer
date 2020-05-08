@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>The Average Golfer</title>
+		<link rel="stylesheet" type="text/css" href="CSS/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway" rel="stylesheet">
+		<script type="text/javascript" src="JS/index.js">
+
+		</script>
+	</head>
+
+	<body>
+
+    <!-- Navigationsleiste -->
+
+    <nav>
+      <div>
+        <a href="index.html">
+          <img src="Pics/AVG Logo SVG.png" alt="AVG Logo" id="logo-klein" >
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Startseite</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="neuigkeiten.html">Neuigkeiten</a></li>
+        <li><a href="ueberuns.html">Über uns</a></li>
+<!-- Drop Menu -->
+      </ul>
+      <div id="myMenu" class="menu">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html" class="menu-link active">Startseite</a>
+        <a href="leistungen.html" class="menu-link">Leistungen</a>
+        <a href="videos.html" class="menu-link">Videos</a>
+        <a href="neuigkeiten.html" class="menu-link">Neuigkeiten</a>
+        <a href="ueberuns.html" class="menu-link">Über Uns</a>
+      </div>
+
+    <span id="open" onclick="openNav()">&equiv;</span>
+    </nav>
+
+<!-- Header Bildbereich -->
+
+    <header>
+    <div class="header-bild">
+      <h1>THE AVERAGE GOLFER</h1>
+    </div>
+
+  </header>
+
+<!-- Kontaktbereich -->
+
+  <main>
+
+    <section id="kontakt-bereich">
+
+			<header id="intro-container">
+				<h1>Kontakt</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</header>
+
+			<form id="kontakt-formular" action="kontakt.html" method="post">
+
+				<div>
+          <!-- <label for="vorname" class="screenreader">Vorname:</label> -->
+  				<input id="vorname" type="text" name="vorname" placeholder="Vorname">
+  				<!-- <label for="nachname" class="screenreader">Nachname:</label> -->
+  				<input id="nachname" type="text" name="nachname" placeholder="Nachname">
+        </div>
+
+				<!-- <label for="email" class="screenreader">E-Mail:</label> -->
+				<input id="email" type="text" name="email" placeholder="E-Mail"
+				pattern="(?:[a-z0-9!#$%&'*+\/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*|'(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*')@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"
+				title="Gib eine gültige E-Mail Adresse ein!">
+				<!-- <label for="nachricht"class="screenreader" >Nachricht:</label> -->
+				<textarea id="nachricht" name="Nachricht" placeholder="Nachricht"></textarea>
+			  <button id="absendenbutton" class="btn-typ4" type="submit" name="absendenbutton">Senden</button>
+
+			</form>
+		</section>
+
+
+
+  </main>
+
+	<footer id="kontakt-footer">
+
+			<a href="#" >Impressum</a>
+			<a href="kontakt.html#kontakt-bereich" >Kontakt</a>
+			<a href="#" >AGB's</a>
+
+	</footer>
+
+	</body>
+
+</html>
